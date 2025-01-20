@@ -16,18 +16,18 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="<?php echo  site_url('Users/save'); ?>" method = 'POST'>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group label-floating">
                                                       <label class="control-label">C.I.:</label>
-                                                      <input class="form-control" type="text">
+                                                      <input class="form-control" type="number" id="ci" name='ci'>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group label-floating">
                                                       <label class="control-label">Name:</label>
-                                                      <input class="form-control" type="text">
+                                                      <input class="form-control" type="text" id="name" name='name'>
                                                     </div>
                                                 </div>
                                             </div>
@@ -35,13 +35,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group label-floating">
                                                       <label class="control-label">Last name:</label>
-                                                      <input class="form-control" type="text">
+                                                      <input class="form-control" type="text" id="lastName" name='lastName'>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group label-floating">
                                                       <label class="control-label">Birthdate:</label>
-                                                      <input class="form-control" type="text">
+                                                      <input class="form-control" type="date" id="birthdate" name='birthdate'>
                                                     </div>
                                                 </div>
                                             </div>
@@ -49,9 +49,17 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group label-floating">
                                                       <label class="control-label">Email:</label>
-                                                      <input class="form-control" type="text">
+                                                      <input class="form-control" type="email" id='email' name='email'>
                                                     </div>
                                                 </div> 	
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">Password:</label>
+                                                      <input class="form-control" type="password" id='password' name='password'>
+                                                    </div>
+                                                </div> 	
+                                            </div>
+                                            <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group label-floating">
                                                       <label class="control-label">Type user:</label>
@@ -62,7 +70,7 @@
                                                         <option value="4">Assistant</option>
                                                       </select>
                                                     </div>
-                                                </div>
+                                                </div>                                                
                                             </div>
 										    <p class="text-center">
 										    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
@@ -98,7 +106,7 @@
                                                 <td><?php echo $user -> email; ?></td>
                                                 <td><?php echo $user -> password; ?></td>
                                                 <td>
-                                                    <a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
+                                                    <a href="<?php echo site_url('Users/getRegisterById');?>/<?php echo $user -> id_use ?>" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
                                                     <a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a>
                                                 </td>
                                             </tr>

@@ -15,5 +15,27 @@
                 return false;
             }
         }
+
+        function insert($data){
+            $this -> db -> insert('user', $data);
+        }
+
+        function update($data, $id){
+            $this->db->where('id_use', $id);
+            $this->db->update('user', $data);
+        }
+        
+
+        function queryForId($id){
+            $this -> db -> where ('id_use', $id);
+            $users= $this -> db -> get('user');
+            if($users -> num_rows() > 0){
+                return $users->row();
+            }else{
+                return false;
+            }
+        }
+
+
     }
 ?>
