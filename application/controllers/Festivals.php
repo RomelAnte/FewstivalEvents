@@ -10,7 +10,7 @@
 
         public function index(){
             $data['festivals'] = $this -> Festival -> getData();
-            $data['users'] = $this -> Festival -> queryForIdUser(3);
+            $data['users'] = $this -> Festival -> queryForIdUser(2);
 
             $this -> load -> view('header');
             $this -> load -> view('Festivals/index', $data);
@@ -30,29 +30,29 @@
             redirect('Festivals/index');
         }
 
-        /*public function getRegisterById($id){
-            $data['user'] = $this -> User -> queryForId($id);
+        public function getRegisterById($id){
+            $data['festival'] = $this -> Festival -> queryForId($id);
+            $data['users'] = $this -> Festival -> queryForIdUser(2);
 
             $this -> load -> view('header');
-            $this -> load -> view('Users/updateUser', $data);
+            $this -> load -> view('Festivals/updateFestivals', $data);
             $this -> load -> view('footer');
         }
 
         public function update(){
             $data = array(
-                'ci' => $this -> input -> POST('ci'),
                 'name' => $this -> input -> POST('name'),
-                'last_name' => $this -> input -> POST('lastName'),
-                'birthdate' => $this -> input -> POST('birthdate'),
-                'email' => $this -> input -> POST('email'),
-                'password' => $this -> input -> POST('password'),
-                'type_user_id' => $this -> input -> POST('type_user')
+                'address' => $this -> input -> POST('address'),
+                'startDate' => $this -> input -> POST('startDate'),
+                'endDate' => $this -> input -> POST('endDate'),
+                'description' => $this -> input -> POST('descripction'),
+                'user_id' => $this -> input -> POST('user')
             );
 
             $id = $this-> input -> POST('id');
 
-            $this -> User -> update($data, $id);
-            redirect('Users/index');
+            $this -> Festival -> update($data, $id);
+            redirect('Festivals/index');
         }
 
         public function delete($id){
@@ -62,6 +62,6 @@
             else{
                 echo "Error al eliminar";
             }
-        }*/
+        }
     }
 ?>
