@@ -1,15 +1,15 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class User extends CI_Model {
+    class Festival extends CI_Model {
         function __construct(){
             parent::__construct();
         }
 
         function getData(){
-            $listUser = $this -> db -> get('user');
-            if($listUser -> num_rows() > 0){
-                return $listUser -> result();
+            $listFestival = $this -> db -> get('festival');
+            if($listFestival -> num_rows() > 0){
+                return $listFestival -> result();
             }
             else{
                 return false;
@@ -17,10 +17,20 @@
         }
 
         function insert($data){
-            $this -> db -> insert('user', $data);
+            $this -> db -> insert('festival', $data);
         }
 
-        function update($data, $id){
+        function queryForIdUser($id){
+            $this -> db -> where ('type_user_id', $id);
+            $users= $this -> db -> get('user');
+            if($users -> num_rows() > 0){
+                return $users->result();
+            }else{
+                return [];
+            }
+        }
+
+        /*function update($data, $id){
             $this->db->where('id_use', $id);
             $this->db->update('user', $data);
         }
@@ -39,7 +49,6 @@
         function delete($id){
             $this -> db -> where ('id_use', $id);
             return $this -> db -> delete('user');
-        }
-
+        }*/
     }
 ?>
