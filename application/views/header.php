@@ -4,7 +4,22 @@
 	<title>Inicio</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="./assets/css/main.css">
+	<!-- Incluir jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!--Bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>">
+
+
+	<!--DataTable-->
+	<link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.css" />
+	<script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+
+
+
 </head>
 <body>
 	<!-- SideBar -->
@@ -18,7 +33,7 @@
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
 				<figure class="full-box">
-					<img src="./assets/img/avatar.jpg" alt="UserIcon">
+					<img src="<?php echo base_url('assets/img/avatar.jpg'); ?>" alt="UserIcon">
 					<figcaption class="text-center text-titles">User Name</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
@@ -61,23 +76,9 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Users <i class="zmdi zmdi-caret-down pull-right"></i>
+					<a href="<?php echo site_url('/Users/index') ?>" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Users
 					</a>
-					<ul class="list-unstyled full-box">
-						<li>
-							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Admin</a>
-						</li>
-						<li>
-							<a href="teacher.html"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Teacher</a>
-						</li>
-						<li>
-							<a href="student.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Student</a>
-						</li>
-						<li>
-							<a href="representative.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representative</a>
-						</li>
-					</ul>
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">

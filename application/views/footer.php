@@ -74,15 +74,17 @@
 	  	</div>
 	</div>
 	<!--====== Scripts -->
-	<script src="./assets/js/jquery-3.1.1.min.js"></script>
-	<script src="./assets/js/sweetalert2.min.js"></script>
-	<script src="./assets/js/bootstrap.min.js"></script>
-	<script src="./assets/js/material.min.js"></script>
-	<script src="./assets/js/ripples.min.js"></script>
-	<script src="./assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="./assets/js/main.js"></script>
+	<script src="<?php echo base_url('assets/js/sweetalert2.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/material.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/ripples.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/jquery.mCustomScrollbar.concat.min.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
 	<script>
 		$.material.init();
+		$(document).ready( function () {
+			$('#table_user').DataTable();
+		} );
 	</script>
 </body>
 </html>

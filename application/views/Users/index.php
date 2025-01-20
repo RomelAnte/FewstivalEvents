@@ -1,59 +1,114 @@
-<div class="tab-pane fade" id="list">
-    <div class="table-responsive">
-        <table class="table table-hover text-center">
-            <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th class="text-center">Code</th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">Status</th>
-                    <th class="text-center">Update</th>
-                    <th class="text-center">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>100</td>
-                    <td>Mathematics</td>
-                    <td>Active</td>
-                    <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-                    <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>500</td>
-                    <td>Science</td>
-                    <td>Active</td>
-                    <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-                    <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>300</td>
-                    <td>Social</td>
-                    <td>Active</td>
-                    <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-                    <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>700</td>
-                    <td>English</td>
-                    <td>Active</td>
-                    <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-                    <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                </tr>
-            </tbody>
-        </table>
-        <ul class="pagination pagination-sm">
-            <li class="disabled"><a href="#!">«</a></li>
-            <li class="active"><a href="#!">1</a></li>
-            <li><a href="#!">2</a></li>
-            <li><a href="#!">3</a></li>
-            <li><a href="#!">4</a></li>
-            <li><a href="#!">5</a></li>
-            <li><a href="#!">»</a></li>
-        </ul>
-    </div>
-</div>
+		<!-- Content page -->
+		<div class="container-fluid">
+			<div class="page-header">
+			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> User </h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+					  	<li class="active"><a href="#new" data-toggle="tab">New</a></li>
+					  	<li><a href="#list" data-toggle="tab">List</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="new">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+									    <form action="">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">C.I.:</label>
+                                                      <input class="form-control" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">Name:</label>
+                                                      <input class="form-control" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">Last name:</label>
+                                                      <input class="form-control" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">Birthdate:</label>
+                                                      <input class="form-control" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">Email:</label>
+                                                      <input class="form-control" type="text">
+                                                    </div>
+                                                </div> 	
+                                                <div class="col-md-6">
+                                                    <div class="form-group label-floating">
+                                                      <label class="control-label">Type user:</label>
+                                                      <select name="type_user" id="type_user" class="form-control">
+                                                        <option value="1">Administrator</option>
+                                                        <option value="2">Singer</option>
+                                                        <option value="3">Organizer</option>
+                                                        <option value="4">Assistant</option>
+                                                      </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+										    <p class="text-center">
+										    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
+										    </p>
+									    </form>
+									</div>
+								</div>
+							</div>
+						</div>
+					  	<div class="tab-pane fade" id="list">
+							<div class="table-responsive">
+								<table class="table table-hover text-center" id="table_user">
+									<thead>
+										<tr>
+											<th class="text-center">#</th>
+											<th class="text-center">CI</th>
+											<th class="text-center">Name</th>
+											<th class="text-center">Last name</th>
+											<th class="text-center">Birthdate</th>
+											<th class="text-center">Email</th>
+											<th class="text-center">Password</th>
+											<th class="text-center">Action</th>
+										</tr>
+									</thead>
+									<tbody>
+                                        <?php foreach ($users as $user):?>
+                                            <tr>
+                                                <td><?php echo $user -> id_use; ?></td>
+                                                <td><?php echo $user -> ci; ?></td>
+                                                <td><?php echo $user -> name; ?></td>
+                                                <td><?php echo $user -> last_name; ?></td>
+                                                <td><?php echo $user -> birthdate; ?></td>
+                                                <td><?php echo $user -> email; ?></td>
+                                                <td><?php echo $user -> password; ?></td>
+                                                <td>
+                                                    <a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
+                                                    <a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+									</tbody>
+								</table>
+							</div>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
