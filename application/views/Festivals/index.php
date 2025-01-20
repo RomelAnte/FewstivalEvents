@@ -95,8 +95,12 @@
                                                 <td><?php echo $festival -> endDate; ?></td>
                                                 <td><?php echo $festival -> description; ?></td>
                                                 <td>
-                                                    <a href="<?php echo site_url('Festivals/getRegisterById');?>/<?php echo $festival -> id_fes ?>" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
-                                                    <a href="<?php /*echo site_url('Users/delete');?>/<?php echo $user -> id_use*/ ?>" class="btn btn-danger btn-raised btn-xs" onclick="return confirm('Desea eliminar el usuario?');"><i class="zmdi zmdi-delete"></i></a>
+                                                    <a href="<?php echo site_url('Festivals/getRegisterById');?>/<?php echo $festival -> id_fes ?>" class="btn btn-success btn-raised btn-xs">
+														<i class="zmdi zmdi-refresh"></i>
+													</a>
+                                                    <a href="<?php echo site_url('Festivals/delete');?>/<?php echo $festival -> id_fes ?>" class="btn btn-danger btn-raised btn-xs" onclick="return confirm('Desea eliminar el usuario?');">
+														<i class="zmdi zmdi-delete"></i>
+													</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

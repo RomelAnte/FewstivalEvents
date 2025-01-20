@@ -56,8 +56,8 @@
         }
 
         public function delete($id){
-            if ($this -> User -> delete($id)){
-                redirect('Users/index');
+            if ($this -> Festival -> delete($id)){
+                redirect('Festivals/index');
             }
             else{
                 echo "Error al eliminar";
