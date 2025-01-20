@@ -65,7 +65,7 @@
 							<a href="<?php echo site_url('/Festivals/index') ?>"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Festivals</a>
 						</li>
 						<li>
-							<a href="subject.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Subject</a>
+							<a href="<?php echo site_url('/Presentations/index') ?>"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Presentations</a>
 						</li>
 						<li>
 							<a href="section.html"><i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> Section</a>
