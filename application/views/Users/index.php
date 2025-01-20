@@ -107,7 +107,7 @@
                                                 <td><?php echo $user -> password; ?></td>
                                                 <td>
                                                     <a href="<?php echo site_url('Users/getRegisterById');?>/<?php echo $user -> id_use ?>" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
-                                                    <a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a>
+                                                    <a href="<?php echo site_url('Users/delete');?>/<?php echo $user -> id_use ?>" class="btn btn-danger btn-raised btn-xs" onclick="return confirm('Desea eliminar el usuario?');"><i class="zmdi zmdi-delete"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

@@ -55,5 +55,14 @@
             $this -> User -> update($data, $id);
             redirect('Users/index');
         }
+
+        public function delete($id){
+            if ($this -> User -> delete($id)){
+                redirect('Users/index');
+            }
+            else{
+                echo "Error al eliminar";
+            }
+        }
     }
 ?>

@@ -36,6 +36,9 @@
             }
         }
 
-
+        function delete($id){
+            $this -> db -> where ('id_use', $id);
+            return $this -> db -> delete('user');
+        }
     }
 ?>

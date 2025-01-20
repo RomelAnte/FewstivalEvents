@@ -8,8 +8,8 @@
     <div class="row">
         <div class="col-xs-12">
             <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                <li class="active"><a href="#new" data-toggle="tab">New</a></li>
-                <li><a href="#list" data-toggle="tab">List</a></li>
+                <li class="active"><a href="<?php echo site_url('/Users/index') ?>">New</a></li>
+                <li><a href="<?php echo site_url('/Users/index') ?>">List</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="new">
@@ -78,7 +78,7 @@
                                         </div>                                         
                                     </div>
                                     <p class="text-center">
-                                        <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
+                                        <button type="submit" class="btn btn-success btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
                                     </p>
                                 </form>
                             </div>
