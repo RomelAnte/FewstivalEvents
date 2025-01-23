@@ -16,8 +16,8 @@
             }
         }
 
-        /*function insert($data){
-            $this -> db -> insert('user', $data);
+        function insert($data){
+            $this -> db -> insert('presentation', $data);
         }
 
         function update($data, $id){
@@ -27,8 +27,8 @@
         
 
         function queryForId($id){
-            $this -> db -> where ('id_use', $id);
-            $users= $this -> db -> get('user');
+            $this -> db -> where ('id_prese', $id);
+            $users= $this -> db -> get('presentation');
             if($users -> num_rows() > 0){
                 return $users->row();
             }else{
@@ -41,7 +41,7 @@
             return $this -> db -> delete('user');
         }
 
-        function queryForIdUser($id){
+        /*function queryForIdUser($id){
             $this -> db -> where ('type_user_id', $id);
             $users= $this -> db -> get('user');
             if($users -> num_rows() > 0){
