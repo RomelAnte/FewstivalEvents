@@ -58,6 +58,9 @@
 					<li>
 						<a href="<?php echo site_url('/Licences/index') ?>"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Licence</a>
 					</li>
+					<li>
+						<a href="<?php echo site_url('/Audits/index') ?>"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Audit</a>
+					</li>
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">

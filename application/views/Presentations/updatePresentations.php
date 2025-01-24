@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-xs-12">
             <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                <li class="active"><a href="<?php echo site_url('/Festivals/index') ?>">New</a></li>
+                <li class="active"><a href="<?php echo site_url('/Presentation/index') ?>">New</a></li>
                 <li><a href="<?php echo site_url('/Presentation/index') ?>">List</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
