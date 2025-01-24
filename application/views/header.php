@@ -55,6 +55,9 @@
 					<a href="<?php echo site_url('');?>">
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
+					<li>
+						<a href="<?php echo site_url('/Licences/index') ?>"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Licence</a>
+					</li>
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
@@ -67,41 +70,12 @@
 						<li>
 							<a href="<?php echo site_url('/Presentations/index') ?>"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Presentations</a>
 						</li>
-						<li>
-							<a href="section.html"><i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> Section</a>
-						</li>
-						<li>
-							<a href="salon.html"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Salon</a>
-						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="<?php echo site_url('/Users/index') ?>" class="btn-sideBar-SubMenu">
 						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Users
 					</a>
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-card zmdi-hc-fw"></i> Payments <i class="zmdi zmdi-caret-down pull-right"></i>
-					</a>
-					<ul class="list-unstyled full-box">
-						<li>
-							<a href="registration.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Registration</a>
-						</li>
-						<li>
-							<a href="payments.html"><i class="zmdi zmdi-money zmdi-hc-fw"></i> Payments</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Settings School <i class="zmdi zmdi-caret-down pull-right"></i>
-					</a>
-					<ul class="list-unstyled full-box">
-						<li>
-							<a href="school.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> School Data</a>
-						</li>
-					</ul>
 				</li>
 			</ul>
 		</div>
