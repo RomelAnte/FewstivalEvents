@@ -16,7 +16,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
-                                    <form action="<?php echo  site_url('Presentations/save'); ?>" method = 'POST'>
+                                    <form action="<?php echo  site_url('Presentations/save'); ?>" method = 'POST' id="form_register">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group label-floating">
@@ -113,3 +113,53 @@
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(function() {
+        $('#form_register').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 10
+                },
+                date: {
+                    required: true
+                },
+                hour: {
+                    required: true
+                },
+                duration: {
+                    required: true,
+                    number: true
+                },
+                festival: {
+                    required: true
+                },
+                user: {
+                    required: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "The name is required",
+                    minlength: "The name must have at least 10 characters"
+                },
+                date: {
+                    required: "The date is required"
+                },
+                hour: {
+                    required: "The hour is required"
+                },
+                duration: {
+                    required: "The duration is required",
+                    number: "The duration must be a number"
+                },
+                festival: {
+                    required: "The festival is required"
+                },
+                user: {
+                    required: "The user is required"
+                }
+            }
+        });
+    });
+</script>

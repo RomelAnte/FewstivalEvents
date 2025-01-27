@@ -89,4 +89,71 @@
         </div>
     </div>
 </div>
+
+<!-- Script -->
+
+<script>
+    $(document).ready(function () {
+        $('#form').validate({
+            rules: {
+                ci: {
+                    required: true,
+                    number: true,
+                    minlength: 10
+                },
+                name: {
+                    required: true,
+                    minlength: 3
+                },
+                lastName: {
+                    required: true,
+                    minlength: 3
+                },
+                birthdate: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 8
+                },
+                type_user: {
+                    required: true
+                }
+            },
+            messages: {
+                ci: {
+                    required: 'The field is required',
+                    number: 'The field must be a number', 
+                    minlength: 'The field must be at least 10 characters'
+                },
+                name: {
+                    required: 'The field is required',
+                    minlength: 'The field must be at least 3 characters'
+                },
+                lastName: {
+                    required: 'The field is required',
+                    minlength: 'The field must be at least 3 characters'
+                },
+                birthdate: {
+                    required: 'The field is required'
+                },
+                email: {
+                    required: 'The field is required',
+                    email: 'The field must be an email'
+                },
+                password: {
+                    required: 'The field is required',
+                    minlength: 'The field must be at least 8 characters'
+                },
+                type_user: {
+                    required: 'The field is required'
+                }
+            }
+        });
+    });
+</script>
                         
